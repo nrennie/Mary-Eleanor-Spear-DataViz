@@ -1,1 +1,1 @@
-# Mary_Eleanor_Spear_DataViz
+# Mary Eleanor Spear Data Visualisation Competition
