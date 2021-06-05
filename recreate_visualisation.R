@@ -101,4 +101,5 @@ q <- plot_grid(p) +
 q
 
 
+#dev.new(width=13,height=8,unit="cm", noRStudioGD = TRUE)
 

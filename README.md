@@ -8,8 +8,18 @@ Mary Eleanor Spear (1897-1986) is credited for introducing the “range-bar” d
   <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/spear_original.jpg?raw=true" width="70%">
 </p>
 
-The data corresponds to yearly US supply of cotton from 1942 to 1948, including US consumption, exports, stocks and total supply. I will attempt to recreate the above plot, and then produce a new visualisation of my own.
+The data corresponds to yearly US supply of cotton from 1942 to 1948, including US consumption, exports, stocks and total supply. Here, will attempt to recreate the above plot: 
 
 <p align="center">
   <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/recreate_visualisation.jpg?raw=true" width="70%">
+</p>
+
+And here are a few visualisations of my own:
+
+<p align="center">
+  <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/new_visualisation_1.jpg?raw=true" width="70%">
+</p>
+
+<p align="center">
+  <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/new_visualisation_2.jpg?raw=true" width="70%">
 </p>
