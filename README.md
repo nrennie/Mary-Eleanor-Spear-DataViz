@@ -23,3 +23,7 @@ And here are a few visualisations of my own:
 <p align="center">
   <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/new_visualisation_2.jpg?raw=true" width="70%">
 </p>
+
+<p align="center">
+  <img src="https://github.com/nrennie/Mary_Eleanor_Spear_DataViz/blob/main/new_visualisation_3.jpg?raw=true" width="70%">
+</p>
