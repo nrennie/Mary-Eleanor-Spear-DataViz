@@ -1,7 +1,9 @@
 #load packages
 library(tidyverse)
 library(extrafont)
-
+library(ggimage)
+library(patchwork)
+library(png) 
 #load data
 cotton <- tibble(read.csv("CottonViz-data.csv"))
 long_data_1 <- pivot_longer(cotton, cols=2:4, values_to = "bales", names_to = "type")
@@ -144,7 +146,258 @@ p <- ggplot(long_data_4, aes(x, y, width=.7, height=.5)) +
         panel.grid.minor = element_blank())
 p
 
+######################################################################################################################################
+######################################################################################################################################
 
+
+####### 1942
+d1942 <- data.frame(x = rep(1:10, 10),
+                y = rep(1:10,rep(10,10)),
+                image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[1,6]),
+                          rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[1,7]),
+                          rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[1,8]),
+                          rep(NA, cotton[1,9]))
+)
+d1942
+p1942 <- ggplot(d1942, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1942"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1942
+
+####### 1943
+d1943 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[2,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[2,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[2,8]),
+                              rep(NA, cotton[2,9]))
+)
+d1943
+p1943 <- ggplot(d1943, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1943"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1943
+
+####### 1944
+d1944 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[3,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[3,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[3,8]),
+                              rep(NA, cotton[3,9]))
+)
+d1944
+p1944 <- ggplot(d1944, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1944"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1944
+
+####### 1945
+d1945 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[4,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[4,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[4,8]),
+                              rep(NA, cotton[4,9]))
+)
+d1945
+p1945 <- ggplot(d1945, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1945"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1945
+
+####### 1946
+d1946 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[5,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[5,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[5,8]),
+                              rep(NA, cotton[5,9]))
+)
+d1946
+p1946 <- ggplot(d1946, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1946"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1946
+
+####### 1947
+d1947 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[6,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[6,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[6,8]),
+                              rep(NA, cotton[6,9]))
+)
+d1947
+p1947 <- ggplot(d1947, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1947"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1947
+
+####### 1948
+d1948 <- data.frame(x = rep(1:10, 10),
+                    y = rep(1:10,rep(10,10)),
+                    image = c(rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", cotton[7,6]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", cotton[7,7]),
+                              rep("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", cotton[7,8]),
+                              rep(NA, cotton[7,9]))
+)
+d1948
+p1948 <- ggplot(d1948, aes(x, y)) + geom_image(aes(image=image), size=.1) +
+  scale_y_reverse() +
+  geom_text(data=data.frame(x=5.5, y=0, label="1948"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=7, fontface=2) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p1948
+
+export_bale <- readPNG("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/exports.png", native = TRUE)
+us_bale <- readPNG("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/us.png", native = TRUE)
+stock_bale <- readPNG("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/stocks.png", native = TRUE)
+blank_bale <- readPNG("C:/Users/rennien/OneDrive - Lancaster University/Programming/git/Mary_Eleanor_Spear_DataViz/blank.png", native = TRUE)
+
+pleg <- ggplot() + 
+  ylim(-0.5,0.5) + xlim(-10,20) +
+  geom_text(data=data.frame(x=5.5, y=0, label="U.S. CONSUMPTION       EXPORTS               STOCKS"), mapping=aes(x=x,y=y, label=label), family="Ebrima", size=5) +
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.background = element_rect(fill = "grey85"),
+        legend.key = element_rect(fill = "grey85", colour="grey85"), 
+        legend.text =  element_text(colour = "black", size=12, family="Ebrima"),
+        plot.title = element_text(colour = "black", size=22, face="bold", hjust = 0.8, vjust = -75, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=12, hjust = 0.75, family="Ebrima", vjust = -130),
+        plot.caption = element_text(colour = "black", size=12, hjust = 0, family="Ebrima"),
+        legend.position=c(0.7, 0.13),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"), #top, right, bottom, left
+        axis.title= element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+pleg
+
+p <- plot_spacer() + plot_spacer() + p1942 + p1943 + p1944 + p1945 + p1946 + p1947 + p1948 + plot_layout(ncol = 3)  +
+  inset_element(p = export_bale, left = -1.2, bottom = 2.3, right = -0.9, top = 2.7) +
+  inset_element(p = us_bale, left = -1.6, bottom = 2.3, right = -1.3, top = 2.7) +
+  inset_element(p = stock_bale, left = -0.8, bottom = 2.3, right = -0.5, top = 2.7) +
+  inset_element(p = blank_bale, left = -1.6, bottom = 2.75, right = -1.4, top = 3.05) +
+  inset_element(p = pleg, left = -1.9, bottom = 2.2, right = -0.4, top = 2.4) +
+  plot_annotation(
+    title = 'Distribution of United States Cotton',
+    subtitle="* Each                  represents approximately 250,000 bales",
+    caption = 'N. Rennie | Source:  Source: U. S. Department of Agriculture'
+  ) &
+  theme(panel.background = element_rect(fill = "grey85", colour="grey85"),
+        plot.background = element_rect(fill = "grey85", colour="grey85"),
+        legend.position = "none",
+        plot.title = element_text(colour = "black", size=25, face="bold", hjust = 0.22, vjust = -10, family="Ebrima"),
+        plot.subtitle = element_text(colour = "black", size=18, hjust = 0.2, family="Ebrima", vjust = -20),
+        plot.caption = element_text(colour = "black", size=16, hjust = 0, family="Ebrima"))
+#p
+
+ggsave(p, filename = "new_visualisation_3.jpg",width=13,height=13,unit="in")
 
 
 
